@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "puoURusi7+H6/C+dmd2dtoGMWgRMJ0RALpl14IWdW/pS/nQH7+O8eK502Wo+DBamrX6bErCX1FdDrMajAtPVVg==",
+  "dgSpecHash": "qi0e5jQtkEbJgkw+Wj7Zqh3sSuSic9L8D23Vp0uq8tm9osJ9MMbBdSL0bXJ1INoXobNZHbdefdxFYq0hQpBxsQ==",
   "success": true,
-  "projectFilePath": "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\RestaurantMenu.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\RestaurantMenu.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lumpysacks\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\lumpysacks\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\lumpysacks\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
