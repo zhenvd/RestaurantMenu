@@ -8,6 +8,7 @@ namespace RestaurantMenu
         public static List<MenuItem> Appetizers = new List<MenuItem>();
         public static List<MenuItem> MainCourse = new List<MenuItem>();
         public static List<MenuItem> Desserts = new List<MenuItem>();
+        public static DateTime updatedOn = DateTime.Today; 
 
         static void Main(string[] args)
         {
@@ -19,11 +20,23 @@ namespace RestaurantMenu
 
         public static void ViewMenu()
         {
+            Console.WriteLine("***Appetizers***");
             foreach(MenuItem item in Appetizers)
             {
-                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}\n");
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
             }
-            
+            Console.WriteLine("***Main Course***");
+            foreach (MenuItem item in MainCourse)
+            {
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
+            }
+            Console.WriteLine("***Desserts***");
+            foreach (MenuItem item in Desserts)
+            {
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}.... Item added on {item.CreationDate.Month}/{item.CreationDate.Day}/{item.CreationDate.Year}\n");
+            }
+            Console.WriteLine($"Menu updated on {updatedOn.Month}/{updatedOn.Day}/{updatedOn.Year}");
+            MenuOptions(Choice());
         }
         public static void AddItem()
         {
@@ -66,7 +79,53 @@ namespace RestaurantMenu
                 MenuItem desserts = new MenuItem(name, desc, category, price);
                 Desserts.Add(desserts);
             }
+            updatedOn = DateTime.Today; //updatedOn would update everytime an item is added.
+            Console.Clear();
             MenuOptions(Choice());
+
+        }
+
+        public static void RemoveItem()
+        {
+            Console.WriteLine("What kind of item would you like to remove? (1) Appetizer, (2) Main Course, or (3) Dessert?");
+            int userInput = Int32.Parse(Console.ReadLine());
+            if(userInput == 1) //appetizer
+            {
+                Console.WriteLine("What is the name of the item you would like removed?");
+                string name = Console.ReadLine();
+
+                for(int i = 0; i < Appetizers.Count; i++)
+                {
+                    if(name.Equals(Appetizers[i].NameOfItem))
+                    {
+                        Appetizers.RemoveAt(i);
+                    }
+                }
+            }
+            else if(userInput == 2) //main course
+            {
+                Console.WriteLine("What is the name of the item you would like removed?");
+                string name = Console.ReadLine();
+                for (int i = 0; i < MainCourse.Count; i++)
+                {
+                    if (name.Equals(MainCourse[i].NameOfItem))
+                    {
+                        MainCourse.RemoveAt(i);
+                    }
+                }
+            }
+            else //dessert
+            {
+                Console.WriteLine("What is the name of the item you would like removed?");
+                string name = Console.ReadLine();
+                for (int i = 0; i < Desserts.Count; i++)
+                {
+                    if (name.Equals(Desserts[i].NameOfItem))
+                    {
+                        Desserts.RemoveAt(i);
+                    }
+                }
+            }
 
         }
         static void MenuOptions(int output)
@@ -79,9 +138,13 @@ namespace RestaurantMenu
             {
                 AddItem();
             }
+            else if (output == 3)
+            {
+                RemoveItem();
+            }
             else
             {
-                //RemoveItem();
+                System.Environment.Exit(0);
             }
         }
 
@@ -93,7 +156,8 @@ namespace RestaurantMenu
                 "\n1 - View Menu: See all items/description/prices on menu" +
                 "\n2 - Add Menu Item: Add Menu Item" +
                 "\n3 - Remove Menu Item: Remove Menu Item" +
-                "\n\nEnter 1, 2 or 3: ");
+                "\n4 - Exit: Exit the Program" +
+                "\n\nEnter 1, 2, 3, or 4: ");
             string choiceString = Console.ReadLine();
             int intChoice;
             int output = 0;
@@ -102,9 +166,9 @@ namespace RestaurantMenu
             {
                 if (int.TryParse(choiceString, out intChoice))
                 {
-                    while (intChoice < 1 || intChoice > 3)
+                    while (intChoice < 1 || intChoice > 4)
                     {
-                        Console.WriteLine("Please enter 1, 2 or 3: ");
+                        Console.WriteLine("Please enter 1, 2, 3, or 4: ");
                         choiceString = Console.ReadLine();
                         if (int.TryParse(choiceString, out intChoice))
                         {
