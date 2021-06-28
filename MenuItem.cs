@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace RestaurantMenu
 {
-    class MenuItem
+    public class MenuItem
     {
+        string NameOfItem;
+        string Description;
+        string Category;
+        double Price;
+        DateTime CreationDate = DateTime.Today;
+
+        public MenuItem(string name, string desc, string category, double price)
+        {
+            NameOfItem = name;
+            Description = desc;
+            Category = category;
+            Price = price;
+        }
     }
 }
