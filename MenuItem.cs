@@ -8,11 +8,11 @@ namespace RestaurantMenu
 {
     public class MenuItem
     {
-        string NameOfItem;
-        string Description;
-        string Category;
-        double Price;
-        DateTime CreationDate = DateTime.Today;
+        public string NameOfItem { get; set; }
+        public string Description;
+        public string Category;
+        public double Price;
+        public DateTime CreationDate = DateTime.Today;
 
         public MenuItem(string name, string desc, string category, double price)
         {
@@ -21,5 +21,7 @@ namespace RestaurantMenu
             Category = category;
             Price = price;
         }
+
+
     }
 }

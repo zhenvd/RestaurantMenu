@@ -5,41 +5,68 @@ namespace RestaurantMenu
 {
     class Menu
     {
-        public static List<string> Appetizers = new List<string>();
-        public static List<string> MainCourse = new List<string>();
-        public static List<string> Desserts = new List<string>();
+        public static List<MenuItem> Appetizers = new List<MenuItem>();
+        public static List<MenuItem> MainCourse = new List<MenuItem>();
+        public static List<MenuItem> Desserts = new List<MenuItem>();
 
         static void Main(string[] args)
         {
             /*Console.WriteLine("Hello World!");*/
             /*AddItem(Appetizers, MainCourse, Desserts);*/
             MenuOptions(Choice());
+            Console.ReadLine();
         }
-        public void AddItem(List<string> Appetizers, List<string> MainCourse, List<string> Desserts)
+
+        public static void ViewMenu()
+        {
+            foreach(MenuItem item in Appetizers)
+            {
+                Console.WriteLine($"{item.NameOfItem}......${item.Price}\n {item.Description}\n");
+            }
+            
+        }
+        public static void AddItem()
         {
             Console.WriteLine("Is the item you are trying to add an (1) Appetizer, (2) Main Course, or (3) Dessert?");
             int output = int.Parse(Console.ReadLine());
             if (output == 1)
             {
+                string category = "appetizer";
                 Console.WriteLine("What is the name of the appetizer you wish to add?");
                 string name = Console.ReadLine();
                 Console.WriteLine("What is the price of the item?");
+                double price = Double.Parse(Console.ReadLine());
+                Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
+                MenuItem appetizers = new MenuItem(name, desc, category, price);
+                Appetizers.Add(appetizers);
+                
             }
             else if (output == 2)
             {
-                Console.WriteLine("What is the name of the main course item you wish to add?");
+                string category = "main course";
+                Console.WriteLine("What is the name of the main course you wish to add?");
                 string name = Console.ReadLine();
                 Console.WriteLine("What is the price of the item?");
+                double price = Double.Parse(Console.ReadLine());
+                Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
+                MenuItem maincourse = new MenuItem(name, desc, category, price);
+                MainCourse.Add(maincourse);
             }
             else
             {
+                string category = "dessert";
                 Console.WriteLine("What is the name of the dessert you wish to add?");
                 string name = Console.ReadLine();
                 Console.WriteLine("What is the price of the item?");
+                double price = Double.Parse(Console.ReadLine());
+                Console.WriteLine("What is a brief description of the item?");
                 string desc = Console.ReadLine();
+                MenuItem desserts = new MenuItem(name, desc, category, price);
+                Desserts.Add(desserts);
             }
+            MenuOptions(Choice());
 
         }
         static void MenuOptions(int output)
@@ -54,7 +81,7 @@ namespace RestaurantMenu
             }
             else
             {
-                RemoveItem();
+                //RemoveItem();
             }
         }
 
@@ -95,7 +122,6 @@ namespace RestaurantMenu
             }
             return output;
         }
-    }
     }
 }
 

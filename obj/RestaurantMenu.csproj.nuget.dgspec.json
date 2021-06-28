@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\RestaurantMenu.csproj": {}
+    "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\RestaurantMenu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\RestaurantMenu.csproj": {
+    "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\RestaurantMenu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\RestaurantMenu.csproj",
+        "projectUniqueName": "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\RestaurantMenu.csproj",
         "projectName": "RestaurantMenu",
-        "projectPath": "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\RestaurantMenu.csproj",
-        "packagesPath": "C:\\Users\\lumpysacks\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lumpysacks\\Desktop\\coding\\launchCode\\chap-18-studio\\RestaurantMenu\\obj\\",
+        "projectPath": "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\RestaurantMenu.csproj",
+        "packagesPath": "C:\\Users\\vz019\\.nuget\\packages\\",
+        "outputPath": "E:\\Educational\\CSharp\\RestaurantMenu\\RestaurantMenu\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lumpysacks\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\vz019\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,20 +49,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[5.0.0, 5.0.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
